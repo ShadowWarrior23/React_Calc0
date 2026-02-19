@@ -77,6 +77,13 @@ const CalcComp: React.FC = () => {
             inp1Ref.current?.focus();
         }
     }
+
+    function clrHist() {
+            setHistory([]);
+            localStorage.removeItem('oldHistory');
+            setCalc('');
+    }
+
     return (
         <div className="cont">
             <section>
@@ -103,13 +110,16 @@ const CalcComp: React.FC = () => {
                             value={calc}
                         />
                     </article>
-                    <button className="bg-amber-300 pt-0.5 pb-0.5 pl-1 pr-1 rounded-lg" type="submit" autoFocus >Számol</button>
+                    <div className="btns flex gap-2">
+                        <button className="bg-amber-300 pt-0.5 pb-0.5 pl-1 pr-1 rounded-lg" type="submit" autoFocus >Számol</button>
+                       {history.length > 0 &&  <button className="bg-red-500 pt-0.5 pb-0.5 pl-1 pr-1 rounded-lg rem" type="button" onClick={clrHist}>Töröl</button>}
+                    </div>
                 </form>
             </section>
             <section>
                 <ul>
                     {history.map((h, i) => (
-                        <HistoryComp key={i} calcHistory={h}/>
+                        <HistoryComp key={i} calcHistory={h} />
                     ))}
                 </ul>
             </section>
