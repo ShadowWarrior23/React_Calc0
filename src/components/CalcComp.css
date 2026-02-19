@@ -8,3 +8,7 @@ option{
 input, option{
     @apply text-center rounded-[10px]  /*tailwindcss -> rounded-2x1, de mi itt sima css-értéket adtunk a tailwind-osztálynak! -> [10px]*/
 }
+
+li{
+    @apply text-shadow-cyan-950;
+}
