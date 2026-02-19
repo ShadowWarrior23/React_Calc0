@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+:root{
+    --bg-col: hsl(0, 100%, 20%);
+    --text-col: darkgreen;
+    --border-col: #800080;
+    --form-col: #5e5e5e;
+    --inp-col: #c90000;
+    --btn-col: #000bbb;
+}
+
+.light{
+    --bg-col: hsl(189, 100%, 50%);
+    --text-col: black;
+    --border-col: #008000;
+    --form-col: #e5e5e5;
+    --inp-col: #90000c;
+    --btn-col: #bbb000;
+}
+
+html{
+    background-color: var(--bg-col);
+    color: var(--text-col);
+}
+
+form{
+    background-color: var(--form-col);
+}
+
+input{
+    background-color: var(--inp-col);
+}

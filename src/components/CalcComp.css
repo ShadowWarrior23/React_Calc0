@@ -1,14 +1,18 @@
 @import "tailwindcss";
-input{
+
+input {
     @apply bg-cyan-400 m-2 p-0.5;
 }
-option{
+
+option {
     @apply text-fuchsia-800 font-bold;
 }
-input, option{
-    @apply text-center rounded-[10px]  /*tailwindcss -> rounded-2x1, de mi itt sima css-értéket adtunk a tailwind-osztálynak! -> [10px]*/
+
+option {
+    @apply text-center rounded-[10px]
+    /*tailwindcss -> rounded-2x1, de mi itt sima css-értéket adtunk a tailwind-osztálynak! -> [10px]*/
 }
 
-li{
+li {
     @apply text-shadow-cyan-950;
 }

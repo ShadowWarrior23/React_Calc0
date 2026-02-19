@@ -87,7 +87,7 @@ const CalcComp: React.FC = () => {
     return (
         <div className="cont">
             <section>
-                <form onSubmit={submitHandler} className="bg-zinc-400 p-3 flex flex-col items-center gap-1">
+                <form onSubmit={submitHandler} className="p-3 flex flex-col items-center gap-1">
                     <article>
                         <input type="number" name="n1"
                             onChange={e => setInp1(e.target.value !== '' ? Number(e.target.value) : '')}
@@ -111,13 +111,13 @@ const CalcComp: React.FC = () => {
                         />
                     </article>
                     <div className="btns flex gap-2">
-                        <button className="bg-amber-300 pt-0.5 pb-0.5 pl-1 pr-1 rounded-lg" type="submit" autoFocus >Számol</button>
-                       {history.length > 0 &&  <button className="bg-red-500 pt-0.5 pb-0.5 pl-1 pr-1 rounded-lg rem" type="button" onClick={clrHist}>Töröl</button>}
+                        <button className="pt-0.5 pb-0.5 pl-1 pr-1 rounded-lg" type="submit" autoFocus >Számol</button>
+                       {history.length > 0 &&  <button className="pt-0.5 pb-0.5 pl-1 pr-1 rounded-lg rem" type="button" onClick={clrHist}>Töröl</button>}
                     </div>
                 </form>
             </section>
-            <section>
-                <ul>
+            <section className="flex justify-center font-bold">
+                <ul className="mt-3 text-shadow-red-950 text-shadow-md">
                     {history.map((h, i) => (
                         <HistoryComp key={i} calcHistory={h} />
                     ))}
